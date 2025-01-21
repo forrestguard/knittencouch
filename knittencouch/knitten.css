@@ -1,0 +1,216 @@
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+h1, h2, h3 {
+    margin: 10px;
+}
+
+.player-hand {
+    display: flex;
+    gap: 10px;
+    margin: 20px auto;
+    justify-content: center;
+}
+
+.card {
+    width: 100px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #000;
+    border-radius: 8px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.card.red.L { background-image: url('kartlar/Card_Red_L.png'); }
+.card.blue.L { background-image: url('kartlar/Card_Blue_L.png'); }
+.card.yellow.L { background-image: url('kartlar/Card_Yellow_L.png'); }
+
+.card.red.J { background-image: url('kartlar/Card_Red_J.png'); }
+.card.blue.J { background-image: url('kartlar/Card_Blue_J.png'); }
+.card.yellow.J { background-image: url('kartlar/Card_Yellow_J.png'); }
+
+.card.red.T { background-image: url('kartlar/Card_Red_T.png'); }
+.card.blue.T { background-image: url('kartlar/Card_Blue_T.png'); }
+.card.yellow.T { background-image: url('kartlar/Card_Yellow_T.png'); }
+
+.card.red.O { background-image: url('kartlar/Card_Red_O.png'); }
+.card.blue.O { background-image: url('kartlar/Card_Blue_O.png'); }
+.card.yellow.O { background-image: url('kartlar/Card_Yellow_O.png'); }
+
+.card.red.Z { background-image: url('kartlar/Card_Red_Z.png'); }
+.card.blue.Z { background-image: url('kartlar/Card_Blue_Z.png'); }
+.card.yellow.Z { background-image: url('kartlar/Card_Yellow_Z.png'); }
+
+.card.red.S { background-image: url('kartlar/Card_Red_S.png'); }
+.card.blue.S { background-image: url('kartlar/Card_Blue_S.png'); }
+.card.yellow.S { background-image: url('kartlar/Card_Yellow_S.png'); }
+
+.card.red.C { background-image: url('kartlar/Card_Red_C.png'); }
+.card.blue.C { background-image: url('kartlar/Card_Blue_C.png'); }
+.card.yellow.C { background-image: url('kartlar/Card_Yellow_C.png'); }
+
+.card.red.I { background-image: url('kartlar/Card_Red_I.png'); }
+.card.blue.I { background-image: url('kartlar/Card_Blue_I.png'); }
+.card.yellow.I { background-image: url('kartlar/Card_Yellow_I.png'); }
+
+.card.red.Dia { background-image: url('kartlar/Card_Red_Dia.png'); }
+.card.blue.Dia { background-image: url('kartlar/Card_Blue_Dia.png'); }
+.card.yellow.Dia { background-image: url('kartlar/Card_Yellow_Dia.png'); }
+
+.yarn {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+.played-cards {
+    display: flex;
+    gap: 10px;
+    margin: 20px auto;
+    justify-content: center;
+}
+
+.yarn.red {
+    background-image: url('Kırmızı.png');
+}
+
+.yarn.blue {
+    background-image: url('Mavi.png');
+}
+
+.yarn.yellow {
+    background-image: url('Sarı.png');
+}
+
+#board-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    background-color: lightgray;
+    border: 2px solid black;
+    margin: 20px auto;
+    width: max-content;
+    background-image: url('Board.png'); 
+    background-size: cover;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    font-size: 24px;
+    background-size: cover;
+}
+
+#draw-yarn-btn, #draw-card-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 20px;
+    cursor: pointer;
+    background-color: #6a89cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#draw-yarn-btn:hover, #draw-card-btn:hover {
+    background-color: #4a69bd;
+}
+
+.controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+}
+
+.control-btn {
+    pointer-events: all;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    transform: rotate(180deg); 
+}
+
+.control-btn[data-direction="left"] {
+    left: -30px;
+}
+
+.control-btn[data-direction="right"] {
+    right: -30px;
+}
+
+.control-btn[data-direction="up"] {
+    top: -30px;
+}
+
+.control-btn[data-direction="down"] {
+    bottom: -30px;
+}
+
+.control-btn[data-row="0"] {
+    top: 10px;
+}
+
+.control-btn[data-row="1"] {
+    top: 115px;
+}
+
+.control-btn[data-row="2"] {
+    top: 220px;
+}
+
+.control-btn[data-col="0"] {
+    left: 10px;
+}
+
+.control-btn[data-col="1"] {
+    left: 115px;
+}
+
+.control-btn[data-col="2"] {
+    left: 220px;
+}
+
+#draw-yarn-btn {
+    position: absolute;
+    left: 100px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    font-size: 24px;
+    padding: 10px 50px;
+    cursor: pointer;
+}
+
+#drawn-yarn-container {
+    margin-top: 100px;
+    height: 80px;
+}

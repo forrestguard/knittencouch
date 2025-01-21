@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knitten</title>
+    <link rel="stylesheet" href="knitten.css">
+    <script src="knitten.js"></script>
+    
+</head>
+<body>
+
+    <h1>Knitten</h1>
+    <h2 id="score">0</h2>
+
+    <h3>Player 1 Cards</h3>
+    <div id="player1-hand" class="player-hand"></div>
+
+    <h3>Player 2 Cards</h3>
+    <div id="player2-hand" class="player-hand"></div>
+
+    <button id="draw-card-btn">Draw Card</button>
+
+    <div id="board-container">
+        <div id="board"></div>
+        <div class="controls">
+            <button class="control-btn" data-direction="left" data-row="0">←</button>
+            <button class="control-btn" data-direction="left" data-row="1">←</button>
+            <button class="control-btn" data-direction="left" data-row="2">←</button>
+            <button class="control-btn" data-direction="right" data-row="0">→</button>
+            <button class="control-btn" data-direction="right" data-row="1">→</button>
+            <button class="control-btn" data-direction="right" data-row="2">→</button>
+            <button class="control-btn" data-direction="up" data-col="0">↑</button>
+            <button class="control-btn" data-direction="up" data-col="1">↑</button>
+            <button class="control-btn" data-direction="up" data-col="2">↑</button>
+            <button class="control-btn" data-direction="down" data-col="0">↓</button>
+            <button class="control-btn" data-direction="down" data-col="1">↓</button>
+            <button class="control-btn" data-direction="down" data-col="2">↓</button>
+        </div>
+    </div>
+    <h3>Player 1 played cards</h3>
+    <div id="player1-played" class="played-cards"></div>
+    <h3>Player 2 played cards</h3>
+    <div id="player2-played" class="played-cards"></div>
+    <div id="player1-score">Player 1 Score: 0</div>
+    <div id="player2-score">Player 2 Score: 0</div>
+    <button id="draw-yarn-btn">Yarn</button>
+    <div id="yarn-count-display">Remaining Yarns: 0</div>
+    <div id="drawn-yarn-container"></div>
+    <h2 id="current-player">Current Player: 1</h2>
+    <h3 id="turn-step">Step 1: Draw a Card</h3>
+    <script src="knitten.js"></script>
+
+</body>
+</html>
